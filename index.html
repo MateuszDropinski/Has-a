@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasło</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="alert">Brak polskich znaków, od 8 do 16 znaków.</div>
+    <input type="text" placeholder="HASŁO" id="password" onchange="checkPassword()">
+    <div id="strength"></div>    
+    <div style="clear:both;"></div>
+    <input type="submit" value="Wygeneruj hasło" id="create" onclick="createPassword()"><br/>
+    <input type="checkbox" id="Znaki"><label for="Znaki">Znaki specjalne</label><br/>
+    <input type="checkbox" id="Litery"><label for="Litery">Różne wielkości liter</label><br/>
+    <input type="checkbox" id="Liczby"><label for="Liczby">Cyfry</label><br/>
+    <input type="range" min="8" max="16" id="dlugosc" onchange="passLength()"><label for="dlugosc" id="length"></label>
+    <script src="script.js"></script>
+</body>
+</html>
